@@ -1,0 +1,14 @@
+{% extends 'flatpages/default.html' %}
+
+
+
+{% block content %}
+<h1>Авторизация</h1>
+<p>&nbsp;</p>
+<form action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Войти</button>
+</form>
+<a class="nav-link" href="http://127.0.0.1:8000/account/google/login/">Войти через Google-аккаунт</a>
+{% endblock content %}

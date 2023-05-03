@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load custom_filters %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Все публикации в любимой категории за прошедшую неделю</h2>
+    {% if post %}
+    {% for i in post %}
+<p><a href="http://127.0.0.1:8000/news/{{i.id}}">{{i.text|truncatechars:20}}</a></p>
+    {% endfor %}
+{% else %}
+<h2>Нет публикаций</h2>
+{% endif %}
+</body>
+</html>

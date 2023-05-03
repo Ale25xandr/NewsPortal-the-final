@@ -1,0 +1,2 @@
+2023-05-03 23:31:42,967 django.security.csrf WARNING  log Forbidden (CSRF token missing.): /account/login/
+2023-05-03 23:32:29,802 django.security.csrf WARNING  log Forbidden (CSRF token missing.): /account/login/

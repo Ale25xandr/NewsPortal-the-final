@@ -1,0 +1,14 @@
+{% extends 'flatpages/default.html' %}
+
+
+
+{% block content %}
+<h1>Редактирование пользователя</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Сохранить" />
+</form>
+<hr>
+<a href="{% url 'passchange' %}"><button>Сменить пароль</button></a>
+{% endblock content %}

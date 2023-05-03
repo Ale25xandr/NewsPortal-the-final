@@ -1,0 +1,515 @@
+2023-05-03 23:17:48,766 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:18:47,482 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\NewsPortal\views.py changed, reloading.
+2023-05-03 23:18:48,103 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:18:52,494 django.request ERROR    log Internal Server Error: /news/5
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:19:38,676 django.request ERROR    log Internal Server Error: /news/5
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:25:55,341 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:25:56,217 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:26:17,532 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:26:18,102 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:26:59,551 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:27:00,203 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:27:13,833 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:27:14,435 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:27:43,822 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:27:44,443 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:29:39,441 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:29:47,002 django.request ERROR    log Internal Server Error: /news/5
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:30:14,432 django.security.csrf WARNING  log Forbidden (CSRF token missing.): /account/login/
+2023-05-03 23:30:37,054 django.security.csrf WARNING  log Forbidden (CSRF token missing.): /account/login/
+2023-05-03 23:31:35,007 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:31:35,599 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:31:42,967 django.security.csrf WARNING  log Forbidden (CSRF token missing.): /account/login/
+2023-05-03 23:32:29,802 django.security.csrf WARNING  log Forbidden (CSRF token missing.): /account/login/
+2023-05-03 23:33:26,287 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:33:27,008 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:34:44,612 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\NewsPortal\views.py changed, reloading.
+2023-05-03 23:34:45,199 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:34:57,400 django.request ERROR    log Internal Server Error: /news/7
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:35:12,119 django.request ERROR    log Internal Server Error: /news/7
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:36:05,687 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:36:06,303 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:36:13,050 django.request ERROR    log Internal Server Error: /news/7
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:36:19,100 django.request ERROR    log Internal Server Error: /news/7
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:41:17,239 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:41:17,842 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:41:54,885 django.request ERROR    log Internal Server Error: /news/7
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:41:59,943 django.request ERROR    log Internal Server Error: /news/7
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:42:43,083 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:42:43,778 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:44:13,773 django.request ERROR    log Internal Server Error: /news/7
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:44:30,713 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:44:31,319 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:44:34,724 django.request ERROR    log Internal Server Error: /news/7
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:44:43,821 django.request ERROR    log Internal Server Error: /news/7
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:45:01,011 django.request ERROR    log Internal Server Error: /news/7
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:45:18,716 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:45:19,345 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:45:24,323 django.request ERROR    log Internal Server Error: /news/7
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:45:24,357 django.server ERROR    basehttp "GET /news/7 HTTP/1.1" 500 96508
+2023-05-03 23:45:30,649 django.request ERROR    log Internal Server Error: /news/7
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:45:30,665 django.server ERROR    basehttp "GET /news/7 HTTP/1.1" 500 96512
+2023-05-03 23:45:37,389 django.request ERROR    log Internal Server Error: /news/7
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:45:37,430 django.server ERROR    basehttp "GET /news/7 HTTP/1.1" 500 96512
+2023-05-03 23:46:19,814 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:46:20,408 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:48:45,469 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:48:46,087 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:49:03,519 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:54:49,097 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:55:50,066 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:55:50,668 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-03 23:55:57,535 django.request ERROR    log Internal Server Error: /news/7
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-03 23:57:36,501 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-03 23:57:38,239 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 00:01:28,674 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-04 00:16:08,234 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 00:20:25,025 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-04 00:20:25,628 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 00:20:29,796 django.request ERROR    log Internal Server Error: /news/4
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-04 00:21:46,556 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-04 00:29:29,979 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 00:30:02,398 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-04 00:30:02,965 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 00:30:34,623 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-04 00:30:35,220 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 00:33:22,252 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-04 00:33:22,854 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 00:33:34,507 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\NewsPortal\views.py changed, reloading.
+2023-05-04 00:33:35,122 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 00:33:39,626 django.request ERROR    log Internal Server Error: /news/4
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-04 00:33:45,233 django.request ERROR    log Internal Server Error: /news/7
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-04 00:34:16,127 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\NewsPortal\views.py changed, reloading.
+2023-05-04 00:34:16,713 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 00:34:40,037 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-04 00:34:40,605 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 00:36:58,026 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 00:37:18,510 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\NewsPortal\views.py changed, reloading.
+2023-05-04 00:37:19,079 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 00:37:38,322 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\NewsPortal\views.py changed, reloading.
+2023-05-04 00:37:38,892 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 00:38:01,369 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\NewsPortal\views.py changed, reloading.
+2023-05-04 00:38:01,927 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 00:38:06,098 django.request ERROR    log Internal Server Error: /news/2
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\views\generic\detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\project\NewsPortal\views.py", line 60, in get_context_data
+    context['is_not_author'] = not self.reques.user.groups.filter(name='Authors').exists()
+                                   ^^^^^^^^^^^
+AttributeError: 'PostDetail' object has no attribute 'reques'
+2023-05-04 00:38:21,916 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\NewsPortal\views.py changed, reloading.
+2023-05-04 00:38:22,530 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
