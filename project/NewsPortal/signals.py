@@ -15,7 +15,6 @@ def notify(sender, instance, **kwargs):
             d[f'{i.category}'] = i.category.subscrubers.all().values('email')
         for k, v in d.items():
             email = [v[i]['email'] for i in range(0, len(v))]
-            print(email)
             mail = EmailMultiAlternatives(
                 subject=instance.heading,
                 body='',

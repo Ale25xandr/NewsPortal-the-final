@@ -1,2 +1,88 @@
 2023-05-03 23:31:42,967 django.security.csrf WARNING  log Forbidden (CSRF token missing.): /account/login/
 2023-05-03 23:32:29,802 django.security.csrf WARNING  log Forbidden (CSRF token missing.): /account/login/
+2023-05-08 23:10:30,729 django.security.SuspiciousFileOperation ERROR    exception The joined path (C:\css\styles.css) is located outside of the base path component (C:\PyProjects\NewsProject\project\static)
+Traceback (most recent call last):
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\debug_toolbar\decorators.py", line 18, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\debug_toolbar\decorators.py", line 30, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\debug_toolbar\views.py", line 23, in render_panel
+    content = panel.content
+              ^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\debug_toolbar\panels\__init__.py", line 103, in content
+    return render_to_string(self.template, self.get_stats())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    current = current()
+              ^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\debug_toolbar\panels\staticfiles.py", line 31, in real_path
+    return finders.find(self.path)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\contrib\staticfiles\finders.py", line 298, in find
+    result = finder.find(path, all=all)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\contrib\staticfiles\finders.py", line 124, in find
+    matched_path = self.find_location(root, path, prefix)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\contrib\staticfiles\finders.py", line 141, in find_location
+    path = safe_join(root, path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PyProjects\NewsProject\venv\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\css\styles.css) is located outside of the base path component (C:\PyProjects\NewsProject\project\static)

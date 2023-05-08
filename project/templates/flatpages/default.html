@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 {% load static %}
 {% load cache %}
+{% load i18n %}
+{% load tz %}
+{% load custom_filters %}
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -10,7 +13,11 @@
         <title>NewsPortal</title>
         <!-- Favicon-->
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <link href="{% static '/css/styles.css' %}" rel="stylesheet" />
+        <style>
+        body {background-color: {% if current_time.hour >= 19 or current_time.hour <= 7 %} darkcyan
+        {% else %} powderblue {% endif %};}
+        </style>
     </head>
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -20,19 +27,30 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         {% if request.user.is_authenticated %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'no_create' %}">Создать</a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/news/{{user.id}}/UpdateUser/">Редактировать профиль</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'post_search' %}">Поиск</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'no_create' %}">{% trans 'Create' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/news/{{user.id}}/UpdateUser/">{% trans 'Edit Profile' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'post_search' %}">{% trans 'Search' %}</a></li>
                             {% if is_not_author %}
-                            <li class="nav-item"><a class="nav-link" href="{% url 'upgrade' %}">Стать автором</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'upgrade' %}">{% trans 'Become an author' %}</a></li>
                             {% endif %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Выйти</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">{% trans 'Exit' %}</a></li>
                         {% else %}
-                        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/account/login/">Создать</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'post_search' %}">Поиск</a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/account/signup/">Регистрация</a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/account/login/">Войти</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/account/login/">{% trans 'Create' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'post_search' %}">{% trans 'Search' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/account/signup/">{% trans 'Registration' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/account/login/">{% trans 'Enter' %}</a></li>
                         {% endif %}
+                        {% get_current_timezone as TIME_ZONE %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="timezone"></label>
+        <select name="timezone">
+            {% for tz in tz_common %}
+            <option value="{{ tz }}"{% if tz == TIME_ZONE %} selected{% endif %}>{{ tz }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Set">
+    </form>
                     </ul>
                 </div>
             </div>
@@ -44,6 +62,23 @@
            {% block content %}
            {{ flatpage.content }}
            {% endblock content %}
+<hr>
+           <form action="{% url 'set_language' %}" method="POST"> {% csrf_token %}
+        <input type="hidden" name="next" value="{{ redirect_to }}">
+
+        <select name="language" id="">
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+
+                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                    {{ language.name_local }} - {{ language.code }}
+                </option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="set">
+    </form>
+
        </div>
    </div>
    </body>

@@ -3,6 +3,7 @@
 {% extends 'flatpages/default.html' %}
 {% load custom_filters %}
 {% load i18n %}
+{% load tz %}
 
 
 {% block title %}
@@ -10,18 +11,16 @@ Post
 {% endblock title %}
 
 {% block content %}
-{% translate "Hello world!" %}
-    <h1>Все новости</h1>
-        <h2>{{now_time|date:'d.m.y H:i'}}</h2>
-        <h4 style="text-align: left;">{{'Всего новостей: '}}{{posts|length}}</h4>
-<!---->
+    <h1>{% trans 'All news' %}</h1>
+        <h2>{{current_time|date:'d.m.y H:i'}}</h2>
+        <h4 style="text-align: left;">{% trans 'Total news: ' %}{{posts|length}}</h4>
         {% if posts %}
         <center>
             <table>
                 <tr>
-                    <td>{{'Дата создания'}}</td>
-                    <td>{{'Заголовок'}}</td>
-                    <td>{{'Текст'}}</td>
+                    <td>{% trans 'Date of creations' %}</td>
+                    <td>{% trans 'Heading' %}</td>
+                    <td>{% trans 'Text' %}</td>
                 </tr>
                 {% for post in posts %}
                 <tr>
@@ -51,7 +50,7 @@ Post
        {% endif %}
    {% endif %}
         {% else %}
-            {{'Новостей нет!'}}
+            {% trans 'There is no news!' %}
         {% endif %}
 
 

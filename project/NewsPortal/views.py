@@ -1,7 +1,10 @@
+import pytz
 from django.contrib.auth import logout
 from django.contrib.auth.views import PasswordChangeView
 from django.core.cache import cache
-from django.shortcuts import redirect
+from django.http import HttpResponse
+from django.shortcuts import redirect, render
+from django.utils import timezone
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from .models import Post, User, Author, Category
 from datetime import datetime
@@ -24,9 +27,16 @@ class PostList(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['now_time'] = datetime.now()
         context['is_not_author'] = not self.request.user.groups.filter(name='Authors').exists()
+        tzname = self.request.session["django_timezone"]
+        tz = pytz.timezone(tzname)
+        context['current_time'] = datetime.now(tz=tz)
+        context['timezones'] = pytz.common_timezones
         return context
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('post_list')
 
 
 class PostListSearch(ListView):
@@ -190,5 +200,3 @@ def no_create(request):
 
 class CreateNo(TemplateView):
     template_name = 'create_no.html'
-
-

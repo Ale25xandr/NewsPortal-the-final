@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load custom_filters %}
+{% load i18n %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,12 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Новая публикация в категории {{category}}!</h2>
+    <h2>{% trans 'New publication in the category' %} {{category}}!</h2>
     <p>
-        Здравствуй! Появилась новая публикация в категории, на которую вы подписаны!
+        {% trans 'Hello! There is a new publication in the category you are subscribed to!' %}
     </p>
 <p>{{post.heading}}</p>
 <p>{{post.text|truncatechars:20}}</p>
-<a href="http://127.0.0.1:8000/news/{{post.id}}">Подробнее</a>
+<a href="http://127.0.0.1:8000/news/{{post.id}}">{% trans 'More detailed' %}</a>
 </body>
 </html>

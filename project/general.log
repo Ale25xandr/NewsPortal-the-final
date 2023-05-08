@@ -513,3 +513,13 @@ Traceback (most recent call last):
 AttributeError: 'PostDetail' object has no attribute 'reques'
 2023-05-04 00:38:21,916 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\NewsPortal\views.py changed, reloading.
 2023-05-04 00:38:22,530 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 23:31:32,167 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 23:35:53,120 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 23:38:30,482 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-04 23:38:31,129 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 23:38:44,031 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-04 23:38:44,908 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 23:51:23,827 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 23:52:22,982 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.
+2023-05-04 23:52:23,642 django.utils.autoreload INFO     autoreload Watching for file changes with StatReloader
+2023-05-04 23:59:01,155 django.utils.autoreload INFO     autoreload C:\PyProjects\NewsProject\project\project\settings.py changed, reloading.

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 {% load custom_filters %}
+{% load i18n %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,13 +9,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Все публикации в любимой категории за прошедшую неделю</h2>
+    <h2>{% trans 'All publications in your favorite category for the past week' %}</h2>
     {% if post %}
     {% for i in post %}
 <p><a href="http://127.0.0.1:8000/news/{{i.id}}">{{i.text|truncatechars:20}}</a></p>
     {% endfor %}
 {% else %}
-<h2>Нет публикаций</h2>
+<h2>{% trans 'No publications' %}</h2>
 {% endif %}
 </body>
 </html>

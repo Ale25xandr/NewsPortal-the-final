@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 
 {% extends 'flatpages/default.html' %}
+{% load i18n %}
 {% load custom_filters %}
 {% load cache %}
 
-
-{% block title %}
-Post
-{% endblock title %}
-
 {% block content %}
-
-    <h1>{{'Все новости в категории: '}}{{category}}</h1>
+    <h1>{% trans 'All news in the category:' %} {{category}}</h1>
         <h2>{{now_time|date:'d.m.y H:i'}}</h2>
-        <h4 style="text-align: left;">{{'Всего новостей: '}}{{cat_list|length}}</h4>
+        <h4 style="text-align: left;">{% trans 'All news:' %} {{cat_list|length}}</h4>
 {% if is_not_subscribed %}
 {% if request.user.is_authenticated %}
-<h4 style="text-align: left;"><a href="{% url 'add_category' category.id %}">Подписаться на рассылку</a></h4>
+<h4 style="text-align: left;"><a href="{% url 'add_category' category.id %}">{% trans 'Subscribe to the newsletter' %}</a></h4>
 {% endif %}
 {% endif %}
 <hr>
@@ -24,9 +19,9 @@ Post
         <center>
             <table>
                 <tr>
-                    <td>{{'Дата создания'}}</td>
-                    <td>{{'Заголовок'}}</td>
-                    <td>{{'Текст'}}</td>
+                    <td>{% trans 'Date of creations' %}</td>
+                    <td>{% trans 'Heading' %}</td>
+                    <td>{% trans 'Text' %}</td>
                 </tr>
                 {% for post in cat_list %}
                 <tr>
@@ -56,9 +51,7 @@ Post
        {% endif %}
    {% endif %}
         {% else %}
-            {{'Новостей нет!'}}
+            {% trans 'There is no news!' %}
         {% endif %}
-
-
 
 {% endblock content %}

@@ -1,14 +1,14 @@
 {% extends 'flatpages/default.html' %}
-
+{% load i18n %}
 
 
 {% block content %}
-<h1>Редактирование пользователя</h1>
+<h1>{% trans 'Editing a user' %}</h1>
 <form action="" method="post">
     {% csrf_token %}
     {{form.as_p}}
-    <input type="submit" value="Сохранить" />
+    <input type="submit" value="{% trans 'Save' %}" />
 </form>
 <hr>
-<a href="{% url 'passchange' %}"><button>Сменить пароль</button></a>
+<a href="{% url 'passchange' %}"><button>{% trans 'Change Password' %}</button></a>
 {% endblock content %}

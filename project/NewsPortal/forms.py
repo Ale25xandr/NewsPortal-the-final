@@ -2,6 +2,7 @@ from allauth.account.forms import SignupForm
 from django import forms
 from django.contrib.auth.models import Group, User
 from django.contrib.auth.views import PasswordChangeForm
+from django.utils.translation import gettext_lazy as _
 
 from .models import Post
 
@@ -10,22 +11,24 @@ class PostFormCreate_and_Update(forms.ModelForm):
     class Meta:
         model = Post
         labels = {
-                  'article': 'Тип',
-                  'category': 'Категория',
-                  'heading': 'Заголовок',
-                  'text': 'Тест',
+                  'article': _('Type'),
+                  'category': _('Category'),
+                  'heading': _('Heading'),
+                  'text': _('Text'),
                   }
         fields = ['article', 'category', 'heading', 'text']
+        localized_fields = ['article', 'category', 'heading', 'text']
 
 
 class UserFormUpdate(forms.ModelForm):
     class Meta:
         model = User
-        labels = {'username': 'Логин',
-                  'first_name': 'Имя',
-                  'last_name': 'Фамилия',
-                  'email': 'E-mail'}
+        labels = {'username': _('Username'),
+                  'first_name': _('First name'),
+                  'last_name': _('Last name'),
+                  'email': _('E-mail')}
         fields = ['first_name', 'last_name', 'email', 'username']
+        localized_fields = fields
         help_texts = {'username': ' '}
 
 

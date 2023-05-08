@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-30 14:09+0300\n"
+"POT-Creation-Date: 2023-05-08 19:54+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,9 +16,216 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: .\templates\posts.html:13
-msgid "Hello world!"
-msgstr "Привет мир!"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\NewsPortal\filters.py:14 .\NewsPortal\forms.py:14
+#: .\NewsPortal\models.py:49 .\templates\post.html:12
+msgid "Type"
+msgstr "Тип"
+
+#: .\NewsPortal\filters.py:15 .\NewsPortal\forms.py:16
+#: .\templates\category_list.html:23 .\templates\post_search.html:32
+#: .\templates\posts.html:21
+msgid "Heading"
+msgstr "Заголовок"
+
+#: .\NewsPortal\filters.py:16 .\NewsPortal\forms.py:15
+#: .\NewsPortal\models.py:51 .\templates\post.html:14
+msgid "Category"
+msgstr "Категория"
+
+#: .\NewsPortal\filters.py:20
+msgid "Date of creation (no later than)"
+msgstr "Дата создания (не позднее)"
+
+#: .\NewsPortal\forms.py:17 .\templates\category_list.html:24
+#: .\templates\post_search.html:33 .\templates\posts.html:22
+msgid "Text"
+msgstr "Текст"
+
+#: .\NewsPortal\forms.py:26
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: .\NewsPortal\forms.py:27
+msgid "First name"
+msgstr "Имя"
+
+#: .\NewsPortal\forms.py:28
+msgid "Last name"
+msgstr "Фамилия"
+
+#: .\NewsPortal\forms.py:29
+msgid "E-mail"
+msgstr "E-mail"
+
+#: .\templates\UserUpdate.html:6
+msgid "Editing a user"
+msgstr "Редактирование пользователя"
+
+#: .\templates\UserUpdate.html:10 .\templates\post_update.html:11
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\UserUpdate.html:13 .\templates\user_password_change.html:14
+msgid "Change Password"
+msgstr "Сменить пароль"
+
+#: .\templates\account\login.html:7
+msgid "Authorization"
+msgstr "Авторизация"
+
+#: .\templates\account\login.html:12 .\templates\flatpages\default.html:36
+msgid "Enter"
+msgstr "Вход"
+
+#: .\templates\account\login.html:14
+msgid "Log in with a Google account"
+msgstr "Войти через Google-аккаунт"
+
+#: .\templates\account\signup.html:7 .\templates\flatpages\default.html:35
+msgid "Registration"
+msgstr "Регистрация"
+
+#: .\templates\account\signup.html:15
+msgid "Register"
+msgstr "Регистрация"
+
+#: .\templates\category_list.html:9
+#, fuzzy
+#| msgid "All news in the category: "
+msgid "All news in the category:"
+msgstr "Все новости в категории: "
+
+#: .\templates\category_list.html:11
+#, fuzzy
+#| msgid "All news"
+msgid "All news:"
+msgstr "Все новости"
+
+#: .\templates\category_list.html:14
+msgid "Subscribe to the newsletter"
+msgstr "Подписаться на рассылку"
+
+#: .\templates\category_list.html:22 .\templates\post_search.html:31
+#: .\templates\posts.html:20
+msgid "Date of creations"
+msgstr "Дата создания"
+
+#: .\templates\category_list.html:54 .\templates\post_search.html:63
+#: .\templates\posts.html:52
+msgid "There is no news!"
+msgstr "Новостей нет!"
+
+#: .\templates\create_no.html:4
+msgid ""
+"You cannot create a new record, because the maximum allowed number of "
+"publications per user is 3 per day"
+msgstr ""
+"Вы не можете создать новую запись, так как максимально возможное число "
+"постов для одного пользователя - 3 в сутки"
+
+#: .\templates\create_no.html:5
+msgid "Try again later"
+msgstr "Попробуйте позднее"
+
+#: .\templates\flatpages\default.html:25 .\templates\flatpages\default.html:33
+msgid "Create"
+msgstr "Создать"
+
+#: .\templates\flatpages\default.html:26
+msgid "Edit Profile"
+msgstr "Редактировать профиль"
+
+#: .\templates\flatpages\default.html:27 .\templates\flatpages\default.html:34
+#: .\templates\post_search.html:22
+msgid "Search"
+msgstr "Поиск"
+
+#: .\templates\flatpages\default.html:29
+msgid "Become an author"
+msgstr "Стать автором"
+
+#: .\templates\flatpages\default.html:31
+msgid "Exit"
+msgstr "Выход"
+
+#: .\templates\ok_email.html:5 .\templates\register_ok.html:5
+msgid "Your account is confirmed!"
+msgstr "Ваша учётная запись потверждена!"
+
+#: .\templates\post.html:11
+msgid "Date of creation"
+msgstr "Дата создания"
+
+#: .\templates\post.html:21
+msgid "Edit"
+msgstr "Редактировать"
+
+#: .\templates\post.html:22 .\templates\post_delete.html:10
+#: .\templates\post_delete.html:11
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\templates\post_create.html:5 .\templates\post_create.html:14
+msgid "Creating news"
+msgstr "Создать"
+
+#: .\templates\post_delete.html:6
+msgid "Deleting a post"
+msgstr "Удаление поста"
+
+#: .\templates\post_search.html:15 .\templates\posts.html:13
+msgid "All news"
+msgstr "Все новости"
+
+#: .\templates\post_search.html:17 .\templates\posts.html:15
+msgid "Total news: "
+msgstr "Всего новостей: "
+
+#: .\templates\post_search.html:25
+msgid "Throw off"
+msgstr "Сбросить"
+
+#: .\templates\post_update.html:6
+msgid "News Editing"
+msgstr "Редактирование новости"
+
+#: .\templates\send.html:11
+msgid "New publication in the category"
+msgstr "Новая публикация в категории"
+
+#: .\templates\send.html:13
+msgid ""
+"Hello! There is a new publication in the category you are subscribed to!"
+msgstr "Привет! Новая публикация в категории, но которую ты подписан!"
+
+#: .\templates\send.html:17
+msgid "More detailed"
+msgstr "Подробнее"
+
+#: .\templates\send_week.html:12
+msgid "All publications in your favorite category for the past week"
+msgstr "Все новости в любимой категории за прошедшую неделю"
+
+#: .\templates\send_week.html:18
+msgid "No publications"
+msgstr "Новостей нет"
+
+#: .\templates\user_password_change.html:6
+msgid "Password change"
+msgstr "Смена пароля"
+
+#, fuzzy
+#~ msgid "heading"
+#~ msgstr "Заголовок"
+
+#, fuzzy
+#~| msgid "Heading"
+#~ msgid "Заголовок"
+#~ msgstr "Заголовок"
+
+#~ msgid "text"
+#~ msgstr "Текст"

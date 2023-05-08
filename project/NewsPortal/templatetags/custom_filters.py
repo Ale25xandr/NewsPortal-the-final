@@ -50,3 +50,5 @@ def cut_names(i):
 @register.filter()
 def cut_number(i):
     return i[0]
+
+

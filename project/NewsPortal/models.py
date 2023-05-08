@@ -2,6 +2,7 @@ from django.core.cache import cache
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from django.utils.translation import gettext as _
 
 
 class Author(models.Model):
@@ -32,7 +33,7 @@ class Author(models.Model):
 
 class Category(models.Model):
     category = models.CharField(max_length=255, unique=True)
-    subscrubers = models.ManyToManyField(User, related_name='category')
+    subscrubers = models.ManyToManyField(User, related_name='category', blank=False)
 
     def __str__(self):
         return self.category
@@ -41,11 +42,13 @@ class Category(models.Model):
 class Post(models.Model):
     news = 'Новость'
     POST = 'Статья'
-    articl = [(news, 'Новость'), (POST, "Статья")]
+    news_en = 'News'
+    post_en = 'Article'
+    articl = [(news, 'Новость'), (POST, "Статья"), (news_en, 'News'), (post_en, 'Article')]
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    article = models.CharField(max_length=255, choices=articl)
+    article = models.CharField(max_length=255, choices=articl, verbose_name=_('Type'))
     date_of_creation = models.DateTimeField(auto_now_add=True)
-    category = models.ManyToManyField(Category, through='PostCategory', blank=False)
+    category = models.ManyToManyField(Category, through='PostCategory', blank=False, verbose_name=_('Category'))
     heading = models.CharField(max_length=255)
     text = models.TextField()
     rating = models.IntegerField(default=0)
